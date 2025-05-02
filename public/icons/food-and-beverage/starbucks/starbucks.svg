@@ -1,20 +1,42 @@
-<svg version="1.1" id="Layer_1" xmlns:x="ns_extend;" xmlns:i="ns_ai;" xmlns:graph="ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 387.1 387.9" style="enable-background:new 0 0 387.1 387.9;" xml:space="preserve">
- <style type="text/css">
-  .st0{fill:#FFFFFF;}
-	.st1{fill:#006341;}
- </style>
- <metadata>
-  <sfw xmlns="ns_sfw;">
-   <slices>
-   </slices>
-   <sliceSourceBounds bottomLeftOrigin="true" height="387.9" width="387.1" x="6.9" y="-394.1">
-   </sliceSourceBounds>
-  </sfw>
- </metadata>
- <g>
-  <circle class="st0" cx="193.6" cy="193.6" r="193.6">
-  </circle>
-  <path class="st1" d="M213,83.7c-1.7-0.3-9.9-1.7-19.5-1.7c-9.6,0-17.8,1.4-19.5,1.7c-1,0.2-1.3-0.8-0.6-1.3
+<svg
+  version="1.1"
+  id="Layer_1"
+  xmlns:x="ns_extend;"
+  xmlns:i="ns_ai;"
+  xmlns:graph="ns_graphs;"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  x="0px"
+  y="0px"
+  viewBox="0 0 387.1 387.9"
+  style="enable-background: new 0 0 387.1 387.9"
+  xml:space="preserve"
+>
+  <style type="text/css">
+    .st0 {
+      fill: #ffffff;
+    }
+    .st1 {
+      fill: #006341;
+    }
+  </style>
+  <metadata>
+    <sfw xmlns="ns_sfw;">
+      <slices></slices>
+      <sliceSourceBounds
+        bottomLeftOrigin="true"
+        height="387.9"
+        width="387.1"
+        x="6.9"
+        y="-394.1"
+      ></sliceSourceBounds>
+    </sfw>
+  </metadata>
+  <g>
+    <circle class="st0" cx="193.6" cy="193.6" r="193.6"></circle>
+    <path
+      class="st1"
+      d="M213,83.7c-1.7-0.3-9.9-1.7-19.5-1.7c-9.6,0-17.8,1.4-19.5,1.7c-1,0.2-1.3-0.8-0.6-1.3
 		c0.7-0.5,20.1-15.3,20.1-15.3l20.1,15.3C214.4,82.9,214,83.9,213,83.7z M179.5,179.5c0,0-1,0.4-1.3,1.3c4.1,3.1,6.9,10.2,15.3,10.2
 		c8.5,0,11.3-7.1,15.3-10.2c-0.3-0.9-1.3-1.3-1.3-1.3s-5.3,1.3-14,1.3S179.5,179.5,179.5,179.5L179.5,179.5z M193.6,167.6
 		c-2.4,0-2.9-0.9-4.5-0.9c-1.5,0-4.5,1.2-5.1,2.3c0,0.6,0.3,1.1,0.7,1.5c3.4,0.5,5,2.4,9,2.4s5.5-1.9,9-2.4c0.4-0.5,0.6-1,0.7-1.5
@@ -66,12 +88,14 @@
 		c-11-11.3-26.1-17.9-44.2-19.8c6.8,10.2,12.2,20.7,16.4,32.7c-10-8.1-22.3-13-36.5-14c8.5,10.9,16.1,22.6,21.6,35.1
 		c0.6,1.4,2,1.9,3.5,1.1c19.4-9.7,41.3-15.1,64.5-15.1s45.1,5.4,64.5,15.1c1.5,0.7,2.8,0.3,3.4-1.1
 		C267.1,98.2,274.6,86.5,283.2,75.6z M314.1,161.1c27.8-9.6,46.1,18,67.6,11.5c-20.8-22.1-37.8-47.3-35.5-76.2
-		c0.1-1.7-1.4-2.7-2.9-1.6c-10.6,7.3-18,19.5-20.3,33.2c-14.7-9.5-32-10.8-46.2-5C291.4,133.3,304.1,146.2,314.1,161.1z">
-  </path>
-  <g>
-   <path class="st1" d="M339.3,361.4h-9.8v26.5H326v-26.5h-9.8v-3.3h23.2V361.4z M343.5,358.1h5.2l10.1,23.3h0.1l10.2-23.3h5.1v29.8
-			h-3.6v-25h-0.1l-10.7,25h-2.1l-10.7-25H347v25h-3.5L343.5,358.1L343.5,358.1z">
-   </path>
+		c0.1-1.7-1.4-2.7-2.9-1.6c-10.6,7.3-18,19.5-20.3,33.2c-14.7-9.5-32-10.8-46.2-5C291.4,133.3,304.1,146.2,314.1,161.1z"
+    ></path>
+    <g>
+      <path
+        class="st1"
+        d="M339.3,361.4h-9.8v26.5H326v-26.5h-9.8v-3.3h23.2V361.4z M343.5,358.1h5.2l10.1,23.3h0.1l10.2-23.3h5.1v29.8
+			h-3.6v-25h-0.1l-10.7,25h-2.1l-10.7-25H347v25h-3.5L343.5,358.1L343.5,358.1z"
+      ></path>
+    </g>
   </g>
- </g>
 </svg>

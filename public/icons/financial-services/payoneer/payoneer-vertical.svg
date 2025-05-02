@@ -1,8 +1,22 @@
-<svg version="1.1" id="Payoneer_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 337.4 380" style="enable-background:new 0 0 337.4 380;" xml:space="preserve">
- <style type="text/css">
-  .st0{fill:#252526;}
- </style>
- <path class="st0" d="M9.9,365.6v-18.3h7.9c14.7,0,23.5-8.2,23.5-20.4c0-11.5-8.9-18.2-21.8-18.2H0.4v56.9H9.9L9.9,365.6z M19,317.2
+<svg
+  version="1.1"
+  id="Payoneer_logo"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  x="0px"
+  y="0px"
+  viewBox="0 0 337.4 380"
+  style="enable-background: new 0 0 337.4 380"
+  xml:space="preserve"
+>
+  <style type="text/css">
+    .st0 {
+      fill: #252526;
+    }
+  </style>
+  <path
+    class="st0"
+    d="M9.9,365.6v-18.3h7.9c14.7,0,23.5-8.2,23.5-20.4c0-11.5-8.9-18.2-21.8-18.2H0.4v56.9H9.9L9.9,365.6z M19,317.2
 	c7.5,0,12.6,3.5,12.6,10.8c0,6.8-5.7,10.8-13.1,10.8H9.9v-21.7H19L19,317.2z M172.8,345.7c0-11.8-8.9-20.7-20.7-20.7
 	c-11.3,0-20.6,9.1-20.6,20.8c0,11.9,8.6,20.5,20.6,20.5C163.6,366.4,172.8,357.6,172.8,345.7L172.8,345.7z M140.5,345.7
 	c0-6.8,5-12,11.6-12c6.6,0,11.7,5.3,11.7,12c0,6.8-5.1,12-11.7,12C145.5,357.8,140.5,352.5,140.5,345.7L140.5,345.7z M262,348.1
@@ -16,9 +30,13 @@
 	c-6.9,0-11.6-5.4-11.6-12.6c0-6.8,5.7-12.5,12.4-12.5C71.6,333.1,76.3,338.5,76.3,345.6L76.3,345.6z M216.5,342.9
 	c0-11.1-5.4-17.9-15.6-17.9c-5.3,0-10.2,2.3-13,5.9v-5.2h-9.1v39.8h9.1V344c0-6.7,4.8-10.9,10.6-10.9c5.8,0,8.8,3.9,8.8,10.5v22h9.1
 	V342.9L216.5,342.9z M76.3,325.8v5.2c-2.6-3.5-6.9-5.9-13.2-5.9c-11,0-20.2,9.7-20.2,21.2c0,11.5,7.9,20.2,18.5,20.2
-	c6.9,0,12-2.5,14.9-6.5v5.8h8.9v-39.8H76.3L76.3,325.8z">
- </path>
- <image style="overflow:visible;" width="574" height="575" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAj8AAAJBCAYAAACphNSGAAAACXBIWXMAABcRAAAXEQHKJvM/AAAA
+	c6.9,0,12-2.5,14.9-6.5v5.8h8.9v-39.8H76.3L76.3,325.8z"
+  ></path>
+  <image
+    style="overflow: visible"
+    width="574"
+    height="575"
+    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAj8AAAJBCAYAAACphNSGAAAACXBIWXMAABcRAAAXEQHKJvM/AAAA
 GXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAsPNJREFUeNrsvQmcpXdZ5/v/t52w
 CFLoOCEs5vRACugAqXYZRhFz2oWQBk1HRYVBU+0yo1fn0+nrch2vdzqtjqNer+nGlWGwK4q7kg5C
 sEednLgwiEAqQCJ0O+agjtdxS+FC9nrmfc/6X57nv7zL2er3/Xy6q+o973nPqbO933r+z6IUAAAA
@@ -814,5 +832,7 @@ dO3bT/3QWVZubjIZ/JhMppMORjv+ZAJas8k8EJ3SDp2NuW6Cdf/wk5ShC/AjglG2xF4ALxx0yTsu
 QKuXTvET72yHrRaf/KGz5+ysMpkMfkwm05DqxI4/LQCohKCOc+QXn9OGgnJZkxL0MIdGgh8UQCa8
 JGl6/0iNDyP4aYNNuc2tbfiZbzs6C0/48KMX7OwwmQx+TCbTOtax3/x0CUltWGjf7l42fDL2aAAo
 6JO0YZSEI8R8F2ekwIjcfi6CHw8vt1fgp+PclLcf/cePM6gxmUwGPyaTaeX1hX/z51WniSlfh/lH
-fPQplkNjMplMJpPJZDKZTIPU/xdgAF16Z3pK7EkSAAAAAElFTkSuQmCC" transform="matrix(0.48 0 0 0.48 31.6146 0.3028)" />
+fPQplkNjMplMJpPJZDKZTIPU/xdgAF16Z3pK7EkSAAAAAElFTkSuQmCC"
+    transform="matrix(0.48 0 0 0.48 31.6146 0.3028)"
+  />
 </svg>

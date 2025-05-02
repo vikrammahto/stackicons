@@ -1,18 +1,39 @@
-<svg version="1.1" id="Layer_1" xmlns:x="ns_extend;" xmlns:i="ns_ai;" xmlns:graph="ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 397.9 138.2" style="enable-background:new 0 0 397.9 138.2;" xml:space="preserve">
- <style type="text/css">
-  .st0{fill:#FFFFFF;}
- </style>
- <metadata>
-  <sfw xmlns="ns_sfw;">
-   <slices>
-   </slices>
-   <sliceSourceBounds bottomLeftOrigin="true" height="138.2" width="397.9" x="1.5" y="-269.3">
-   </sliceSourceBounds>
-  </sfw>
- </metadata>
- <g>
+<svg
+  version="1.1"
+  id="Layer_1"
+  xmlns:x="ns_extend;"
+  xmlns:i="ns_ai;"
+  xmlns:graph="ns_graphs;"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  x="0px"
+  y="0px"
+  viewBox="0 0 397.9 138.2"
+  style="enable-background: new 0 0 397.9 138.2"
+  xml:space="preserve"
+>
+  <style type="text/css">
+    .st0 {
+      fill: #ffffff;
+    }
+  </style>
+  <metadata>
+    <sfw xmlns="ns_sfw;">
+      <slices></slices>
+      <sliceSourceBounds
+        bottomLeftOrigin="true"
+        height="138.2"
+        width="397.9"
+        x="1.5"
+        y="-269.3"
+      ></sliceSourceBounds>
+    </sfw>
+  </metadata>
   <g>
-   <path class="st0" d="M328.4,138.2c-15.8,0-30.9-5.2-43.1-14.9c-12.2,9.6-27.3,14.9-43.1,14.9s-30.9-5.2-43.1-14.9
+    <g>
+      <path
+        class="st0"
+        d="M328.4,138.2c-15.8,0-30.9-5.2-43.1-14.9c-12.2,9.6-27.3,14.9-43.1,14.9s-30.9-5.2-43.1-14.9
 			c-12.2,9.6-27.3,14.9-43.1,14.9s-30.9-5.2-43.1-14.9c-12.2,9.6-27.3,14.9-43.1,14.9c-18.4,0-35.7-7-48.8-19.8
 			C7.7,105.6,0.3,88.5,0,70.3C-0.3,52,6.5,34.7,19.2,21.4C31.8,8.2,48.9,0.6,67.3,0l0.3,0l4.4,0c15,0.5,29.2,5.7,40.8,14.8
 			C124.3,5.7,138.5,0.5,153.5,0l0.3,7.8V0l4.4,0c15,0.5,29.2,5.7,40.8,14.8C210.6,5.7,224.7,0.5,239.8,0l0.3,0l4.4,0
@@ -28,8 +49,8 @@
 			c-6.8,9.1-10.7,20.3-10.5,32.4c0.2,11.4,4.1,22,10.5,30.6c6.4-8.6,10.3-19.2,10.5-30.6C209.7,57.9,205.7,46.7,199,37.6z
 			 M112.7,37.6c-6.8,9.1-10.7,20.3-10.5,32.4c0.2,11.4,4.1,22,10.5,30.6C119.1,92,123,81.4,123.2,70
 			C123.4,57.9,119.5,46.7,112.7,37.6z M285.2,37.6c-6.8,9.1-10.7,20.3-10.5,32.4c0.2,11.4,4.1,22,10.5,30.6
-			c6.4-8.6,10.3-19.2,10.5-30.6C296,57.9,292,46.7,285.2,37.6z">
-   </path>
+			c6.4-8.6,10.3-19.2,10.5-30.6C296,57.9,292,46.7,285.2,37.6z"
+      ></path>
+    </g>
   </g>
- </g>
 </svg>
