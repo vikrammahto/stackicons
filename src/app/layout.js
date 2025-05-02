@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={` ${figtree.className} bg-[#0f1115] text-white antialiased flex min-h-screen flex-col justify-between`}
+        className={` ${figtree.className} flex min-h-screen flex-col justify-between antialiased`}
       >
         <Header />
         {children}
