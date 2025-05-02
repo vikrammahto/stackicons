@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ClipboardCheck, Download, Copy } from 'lucide-react';
+import { formatSvgToJsx } from '@/lib/svgUtils';
 
 const IconCard = ({ icon }) => {
   const [copied, setCopied] = useState(false);
@@ -14,7 +15,7 @@ const IconCard = ({ icon }) => {
       .then((response) => response.text())
       .then((svgContent) => {
         const html = svgContent;
-        const jsx = svgContent.replace(/class=/g, 'className=');
+        const jsx = formatSvgToJsx(svgContent);
         const textToCopy = type === 'jsx' ? jsx : html;
 
         navigator.clipboard.writeText(textToCopy).then(() => {

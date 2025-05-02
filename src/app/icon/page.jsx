@@ -1,7 +1,7 @@
 'use client';
 import IconCard from '@/components/IconCard';
 import React, { useState } from 'react';
-import { icons } from '@/libs/icons';
+import { icons } from '@/lib/icons';
 
 const page = () => {
   const [search, setSearch] = useState('');
@@ -21,8 +21,8 @@ const page = () => {
       />
 
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-        {filteredIcons.map((icon) => (
-          <IconCard key={icon.slug} icon={icon} />
+        {filteredIcons.map((icon, index) => (
+          <IconCard key={index} icon={icon} />
         ))}
       </div>
     </div>
