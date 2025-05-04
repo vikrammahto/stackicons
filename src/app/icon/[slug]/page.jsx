@@ -57,7 +57,12 @@ const page = ({ params }) => {
           <Button variant="outline">Back to Icons</Button>
         </Link>
       </div>
-
+      <p className="mb-4">
+        <strong>ChatGPT</strong> is an AI chatbot developed by OpenAI, based on
+        the GPT (Generative Pre-trained Transformer) architecture. It's widely
+        used for generating human-like responses and performing tasks like
+        writing, coding, and more.
+      </p>
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
         {iconVariants.map((variant, index) => (
           <div
@@ -95,6 +100,35 @@ const page = ({ params }) => {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="mt-12">
+        <h2 className="mb-4 text-xl font-semibold">Related Icons</h2>
+        <div className="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-6">
+          {icons
+            .filter(
+              (icon) =>
+                icon.category === iconVariants[0].category &&
+                icon.name.toLowerCase().split('-')[0] !== slug.toLowerCase(),
+            )
+            .slice(0, 12)
+            .map((relatedIcon, idx) => (
+              <Link
+                key={idx}
+                href={`/icon/${relatedIcon.name.split('-')[0]}`}
+                className="flex flex-col items-center gap-2 rounded-lg border p-3 transition hover:shadow-md"
+              >
+                <img
+                  src={`/icons/${relatedIcon.category}/${relatedIcon.brand}/${relatedIcon.fileName}`}
+                  alt={relatedIcon.name}
+                  className="h-14 w-14 object-contain"
+                />
+                <p className="text-center text-xs text-gray-700">
+                  {relatedIcon.name}
+                </p>
+              </Link>
+            ))}
+        </div>
       </div>
     </div>
   );
