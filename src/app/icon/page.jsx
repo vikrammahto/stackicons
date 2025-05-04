@@ -41,6 +41,27 @@ const page = () => {
     baseName.toLowerCase().includes(search.toLowerCase()),
   );
 
+  const downloadSVG = (filePath, fileName) => {
+    const link = document.createElement('a');
+    link.href = filePath;
+    link.download = fileName;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const copySVG = async (filePath) => {
+    try {
+      const res = await fetch(filePath);
+      const svgText = await res.text();
+      await navigator.clipboard.writeText(svgText);
+      alert('✅ SVG copied to clipboard!');
+    } catch (err) {
+      console.error('❌ Copy failed:', err);
+      alert('❌ Failed to copy SVG.');
+    }
+  };
+
   return (
     <div className="mx-auto w-full px-4 py-8 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8">
       <input
@@ -101,11 +122,26 @@ const page = () => {
                     </div>
                   </div>
 
-                  <div className="ms-auto space-x-3">
-                    <Button variant={'outline'}>
-                      <Download /> SVG
+                  <div className="ms-auto flex flex-wrap gap-3">
+                    <Button
+                      variant={'outline'}
+                      onClick={() =>
+                        downloadSVG(
+                          `/icons/${groupedIcons[baseName][0].category}/${groupedIcons[baseName][0].brand}/${groupedIcons[baseName][0].fileName}`,
+                          groupedIcons[baseName][0].fileName,
+                        )
+                      }
+                    >
+                      <Download /> Download
                     </Button>
-                    <Button className="">
+                    <Button
+                      className=""
+                      onClick={() =>
+                        copySVG(
+                          `/icons/${groupedIcons[baseName][0].category}/${groupedIcons[baseName][0].brand}/${groupedIcons[baseName][0].fileName}`,
+                        )
+                      }
+                    >
                       <Copy />
                       Copy SVG
                     </Button>
@@ -113,7 +149,9 @@ const page = () => {
 
                   <div className="flex justify-center">
                     <Link href={`/icon/${baseName.toLowerCase()}`}>
-                      <Button variant="ghost" className={'text-blue-500'}>See more icon variants</Button>
+                      <Button variant="ghost" className={'text-blue-500'}>
+                        See more icon variants
+                      </Button>
                     </Link>
                   </div>
                 </div>
