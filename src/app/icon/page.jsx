@@ -2,18 +2,22 @@
 import IconCard from '@/components/IconCard';
 import React, { useState, useEffect } from 'react';
 import { icons } from '@/lib/icons';
+import Link from 'next/link';
 import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from '@/components/ui/sheet';
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
+import { Copy, Download } from 'lucide-react';
 
 const page = () => {
   const [search, setSearch] = useState('');
   const [selectedVariants, setSelectedVariants] = useState([]);
+  const [selectedIcon, setSelectedIcon] = useState(null);
 
   useEffect(() => {
     console.log('Selected variants:', selectedVariants);
@@ -49,43 +53,73 @@ const page = () => {
 
       <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
         {filteredIcons.map((baseName, index) => (
-          <Sheet
-            key={index}
-            onOpenChange={(open) => {
-              if (open) {
-                setSelectedVariants(groupedIcons[baseName]);
-              } else {
-                setSelectedVariants([]);
-              }
-            }}
-          >
-            <SheetTrigger asChild>
-              <div className='hover:cursor-pointer'>
-                <IconCard icon={groupedIcons[baseName][0]} />
-              </div>
-            </SheetTrigger>
-            <SheetContent>
-              <SheetHeader>
-                <SheetTitle>{baseName} Variants</SheetTitle>
-                <SheetDescription>
-                  All available SVG versions of {baseName}
-                </SheetDescription>
-              </SheetHeader>
-
-              <div className="mt-4 grid grid-cols-2 gap-4">
-                {selectedVariants.map((variant, index) => (
-                  <div key={index} className="flex flex-col items-center gap-2">
-                    <img
-                      src={`/icons/${variant.category}/${variant.brand}/${variant.fileName}`}
-                      alt={variant.name}
-                      className="h-16 w-16 object-contain"
-                    />
-                    <p className="text-center text-sm">{variant.name}</p>
+          <div key={index}>
+            <Dialog>
+              <DialogTrigger asChild>
+                <div className="hover:cursor-pointer">
+                  <IconCard icon={groupedIcons[baseName][0]} />
+                </div>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-2xl">
+                <DialogHeader>
+                  <DialogTitle>{baseName} Variants</DialogTitle>
+                  <DialogDescription>
+                    All available SVG versions of {baseName}
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="flex flex-col items-center gap-4">
+                  <div className="flex w-full items-start gap-6">
+                    <div className="rounded-lg border p-3">
+                      <img
+                        src={`/icons/${groupedIcons[baseName][0].category}/${groupedIcons[baseName][0].brand}/${groupedIcons[baseName][0].fileName}`}
+                        alt={groupedIcons[baseName][0].name}
+                        className="h-32 w-32 object-contain"
+                      />
+                    </div>
+                    <div>
+                      <h2 className="text-xl font-semibold text-gray-900">
+                        {groupedIcons[baseName][0].name}
+                      </h2>
+                      <p className="mt-1 text-sm text-gray-600">
+                        {groupedIcons[baseName][0].category} · &#x26;#xf05c; ·
+                        f05c
+                      </p>
+                      <div className="mt-2 flex flex-wrap gap-2">
+                        <span className="rounded bg-gray-100 px-2 py-0.5 text-xs text-gray-700">
+                          abacus
+                        </span>
+                        <span className="rounded bg-gray-100 px-2 py-0.5 text-xs text-gray-700">
+                          math
+                        </span>
+                        <span className="rounded bg-gray-100 px-2 py-0.5 text-xs text-gray-700">
+                          counting
+                        </span>
+                        <span className="rounded bg-gray-100 px-2 py-0.5 text-xs text-gray-700">
+                          adding up
+                        </span>
+                      </div>
+                    </div>
                   </div>
-                ))}
-              </div>
-            </SheetContent>
-          </Sheet>
+
+                  <div className="ms-auto space-x-3">
+                    <Button variant={'outline'}>
+                      <Download /> SVG
+                    </Button>
+                    <Button className="">
+                      <Copy />
+                      Copy SVG
+                    </Button>
+                  </div>
+
+                  <div className="flex justify-center">
+                    <Link href={`/icon/${baseName.toLowerCase()}`}>
+                      <Button variant="ghost" className={'text-blue-500'}>See more icon variants</Button>
+                    </Link>
+                  </div>
+                </div>
+              </DialogContent>
+            </Dialog>
+          </div>
         ))}
       </div>
     </div>
