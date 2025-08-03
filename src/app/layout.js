@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
       <body
         className={` ${figtree.className} antialiased`}
       >
-        <Header />
+       
         {children}
       </body>
     </html>
