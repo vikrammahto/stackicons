@@ -1,15 +1,52 @@
 const fs = require('fs');
 const path = require('path');
+const matter = require('gray-matter');
 
 const publicPath = path.join(__dirname, '..', 'public', 'icons');
 const outputPath = path.join(__dirname, '..', 'src', 'lib', 'icons.js');
+const contentPath = path.join(__dirname, '..', 'content', 'icons');
+
+// Import brand name corrections from SEO content generator
+const { brandNameCorrections } = require('./brand-name-corrections');
 
 function toSlug(str) {
   return str.toLowerCase().replace(/\s+/g, '-');
 }
 
 function toTitle(str) {
+  // Check if we have a specific correction for this brand
+  if (brandNameCorrections && brandNameCorrections[str.toLowerCase()]) {
+    return brandNameCorrections[str.toLowerCase()];
+  }
+
+  // Default formatting
   return str.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
+function getIconMetadata(brand) {
+  const mdxPath = path.join(contentPath, `${brand}.mdx`);
+
+  if (fs.existsSync(mdxPath)) {
+    try {
+      const fileContent = fs.readFileSync(mdxPath, 'utf8');
+      const { data } = matter(fileContent);
+      return {
+        title: data.title || toTitle(brand),
+        url: data.url || '',
+        description: data.description || '',
+        customKeywords: data.keywords || [],
+      };
+    } catch (error) {
+      console.warn(`Error reading metadata for ${brand}:`, error.message);
+    }
+  }
+
+  return {
+    title: toTitle(brand),
+    url: '',
+    description: '',
+    customKeywords: [],
+  };
 }
 
 function generateIconList() {
@@ -27,15 +64,22 @@ function generateIconList() {
       if (!fs.statSync(brandPath).isDirectory()) return;
 
       const files = fs.readdirSync(brandPath).filter((f) => f.endsWith('.svg'));
+      const metadata = getIconMetadata(brand);
 
       files.forEach((fileName) => {
         icons.push({
-          name: toTitle(brand),
+          name: metadata.title,
           slug: toSlug(brand),
           category: toSlug(category),
           brand: toSlug(brand),
           fileName,
-          keywords: [toSlug(brand), toSlug(category)],
+          url: metadata.url,
+          description: metadata.description,
+          keywords: [
+            toSlug(brand),
+            toSlug(category),
+            ...metadata.customKeywords,
+          ],
         });
       });
     });
