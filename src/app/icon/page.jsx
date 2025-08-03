@@ -83,8 +83,10 @@ const page = () => {
               </DialogTrigger>
               <DialogContent className="sm:max-w-2xl">
                 <DialogHeader>
-                  <DialogTitle>{baseName} Variants</DialogTitle>
-                  <DialogDescription>
+                  <DialogTitle className={'sr-only'}>
+                    {baseName} Variants
+                  </DialogTitle>
+                  <DialogDescription className={'sr-only'}>
                     All available SVG versions of {baseName}
                   </DialogDescription>
                 </DialogHeader>
@@ -94,30 +96,25 @@ const page = () => {
                       <img
                         src={`/icons/${groupedIcons[baseName][0].category}/${groupedIcons[baseName][0].slug}/${groupedIcons[baseName][0].fileName}`}
                         alt={groupedIcons[baseName][0].name}
-                        className="h-32 w-32 object-contain"
+                        className="h-32 max-h-32 w-32 max-w-32 object-contain"
                       />
                     </div>
                     <div>
                       <h2 className="text-xl font-semibold text-gray-900">
                         {groupedIcons[baseName][0].name}
                       </h2>
-                      <p className="mt-1 text-sm text-gray-600">
-                        {groupedIcons[baseName][0].category} · &#x26;#xf05c; ·
-                        f05c
-                      </p>
+
                       <div className="mt-2 flex flex-wrap gap-2">
-                        <span className="rounded bg-gray-100 px-2 py-0.5 text-xs text-gray-700">
-                          abacus
-                        </span>
-                        <span className="rounded bg-gray-100 px-2 py-0.5 text-xs text-gray-700">
-                          math
-                        </span>
-                        <span className="rounded bg-gray-100 px-2 py-0.5 text-xs text-gray-700">
-                          counting
-                        </span>
-                        <span className="rounded bg-gray-100 px-2 py-0.5 text-xs text-gray-700">
-                          adding up
-                        </span>
+                        {[...new Set(groupedIcons[baseName][0].keywords)].map(
+                          (keyword, index) => (
+                            <span
+                              key={index}
+                              className="rounded bg-gray-100 px-2 py-0.5 text-xs text-gray-700"
+                            >
+                              {keyword}
+                            </span>
+                          ),
+                        )}
                       </div>
                     </div>
                   </div>
@@ -136,11 +133,14 @@ const page = () => {
                     </Button>
                     <Button
                       className=""
-                      onClick={() =>
+                      onClick={() => {
                         copySVG(
                           `/icons/${groupedIcons[baseName][0].category}/${groupedIcons[baseName][0].slug}/${groupedIcons[baseName][0].fileName}`,
-                        )
-                      }
+                        );
+                        console.log('SVG copied:', {
+                          category: groupedIcons[baseName][0].keywords,
+                        });
+                      }}
                     >
                       <Copy />
                       Copy SVG

@@ -78,44 +78,11 @@ const MDXRenderer = ({ content, frontmatter }) => {
     <div className="mdx-content">
       {frontmatter?.title && (
         <div className="mb-8">
-          <div className="mb-6 flex items-start gap-4">
-            <div className="flex-1">
-              <h1 className="mb-2 text-4xl font-bold text-gray-900">
-                {frontmatter.title}
-              </h1>
-              {frontmatter.url && (
-                <a
-                  href={frontmatter.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 underline transition-colors hover:text-blue-800"
-                >
-                  Visit Website
-                  <svg
-                    className="h-3 w-3"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                    />
-                  </svg>
-                </a>
-              )}
-            </div>
-          </div>
-
           {frontmatter.description && (
-            <div className="mb-6 border-l-4 border-blue-400 bg-blue-50 p-4">
-              <p className="leading-relaxed text-gray-800">
-                <strong className="text-blue-800">{frontmatter.title}</strong> -{' '}
-                {frontmatter.description}
-              </p>
-            </div>
+            <p className="leading-relaxed text-gray-800">
+              <strong className="text-gray-800">{frontmatter.title}</strong> -{' '}
+              {frontmatter.description}
+            </p>
           )}
         </div>
       )}
