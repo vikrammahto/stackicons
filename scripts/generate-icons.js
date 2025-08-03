@@ -71,7 +71,7 @@ function generateIconList() {
           name: metadata.title,
           slug: toSlug(brand),
           category: toSlug(category),
-          brand: toSlug(brand),
+          brand: metadata.title, // Use the corrected brand name instead of slug
           fileName,
           url: metadata.url,
           description: metadata.description,

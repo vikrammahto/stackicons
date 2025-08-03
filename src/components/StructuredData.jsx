@@ -23,8 +23,8 @@ const StructuredData = ({ icon, mdxContent }) => {
       '@type': 'Organization',
       name: 'StackIcons',
     },
-    image: `/icons/${icon.category}/${icon.brand}/${icon.fileName}`,
-    downloadUrl: `/icons/${icon.category}/${icon.brand}/${icon.fileName}`,
+    image: `/icons/${icon.category}/${icon.slug}/${icon.fileName}`,
+    downloadUrl: `/icons/${icon.category}/${icon.slug}/${icon.fileName}`,
     keywords:
       mdxContent.frontmatter?.keywords?.join(', ') || icon.keywords?.join(', '),
   };

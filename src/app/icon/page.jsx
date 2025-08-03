@@ -92,7 +92,7 @@ const page = () => {
                   <div className="flex w-full items-start gap-6">
                     <div className="rounded-lg border p-3">
                       <img
-                        src={`/icons/${groupedIcons[baseName][0].category}/${groupedIcons[baseName][0].brand}/${groupedIcons[baseName][0].fileName}`}
+                        src={`/icons/${groupedIcons[baseName][0].category}/${groupedIcons[baseName][0].slug}/${groupedIcons[baseName][0].fileName}`}
                         alt={groupedIcons[baseName][0].name}
                         className="h-32 w-32 object-contain"
                       />
@@ -127,7 +127,7 @@ const page = () => {
                       variant={'outline'}
                       onClick={() =>
                         downloadSVG(
-                          `/icons/${groupedIcons[baseName][0].category}/${groupedIcons[baseName][0].brand}/${groupedIcons[baseName][0].fileName}`,
+                          `/icons/${groupedIcons[baseName][0].category}/${groupedIcons[baseName][0].slug}/${groupedIcons[baseName][0].fileName}`,
                           groupedIcons[baseName][0].fileName,
                         )
                       }
@@ -138,7 +138,7 @@ const page = () => {
                       className=""
                       onClick={() =>
                         copySVG(
-                          `/icons/${groupedIcons[baseName][0].category}/${groupedIcons[baseName][0].brand}/${groupedIcons[baseName][0].fileName}`,
+                          `/icons/${groupedIcons[baseName][0].category}/${groupedIcons[baseName][0].slug}/${groupedIcons[baseName][0].fileName}`,
                         )
                       }
                     >
@@ -148,7 +148,7 @@ const page = () => {
                   </div>
 
                   <div className="flex justify-center">
-                    <Link href={`/icon/${baseName.toLowerCase()}`}>
+                    <Link href={`/icon/${groupedIcons[baseName][0].slug}`}>
                       <Button variant="ghost" className={'text-blue-500'}>
                         See more icon variants
                       </Button>

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 const IconCard = ({ icon }) => {
   const [showDetails, setShowDetails] = useState(false);
-  const imgSrc = `/icons/${icon.category}/${icon.brand}/${icon.fileName}`;
+  const imgSrc = `/icons/${icon.category}/${icon.slug}/${icon.fileName}`;
 
   return (
     <div

@@ -21,10 +21,7 @@ const IconPage = ({ params }) => {
       setSlug(resolvedSlug);
 
       // Find all variants of the icon
-      const variants = icons.filter(
-        (icon) =>
-          icon.name.toLowerCase().split('-')[0] === resolvedSlug.toLowerCase(),
-      );
+      const variants = icons.filter((icon) => icon.slug === resolvedSlug);
       setIconVariants(variants);
     };
 
@@ -147,7 +144,7 @@ const IconPage = ({ params }) => {
               className="flex flex-col items-center justify-center gap-4 rounded-xl border bg-[#faf9f5] p-6"
             >
               <img
-                src={`/icons/${variant.category}/${variant.brand}/${variant.fileName}`}
+                src={`/icons/${variant.category}/${variant.slug}/${variant.fileName}`}
                 alt={variant.name}
                 className="h-24 w-24 object-contain"
               />
@@ -156,7 +153,7 @@ const IconPage = ({ params }) => {
                   variant={'outline'}
                   onClick={() =>
                     downloadSVG(
-                      `/icons/${variant.category}/${variant.brand}/${variant.fileName}`,
+                      `/icons/${variant.category}/${variant.slug}/${variant.fileName}`,
                       variant.fileName,
                     )
                   }
@@ -167,7 +164,7 @@ const IconPage = ({ params }) => {
                   className=""
                   onClick={() =>
                     copySVG(
-                      `/icons/${variant.category}/${variant.brand}/${variant.fileName}`,
+                      `/icons/${variant.category}/${variant.slug}/${variant.fileName}`,
                     )
                   }
                 >
@@ -192,11 +189,11 @@ const IconPage = ({ params }) => {
               .map((relatedIcon, idx) => (
                 <Link
                   key={idx}
-                  href={`/icon/${relatedIcon.name.split('-')[0]}`}
+                  href={`/icon/${relatedIcon.slug}`}
                   className="flex flex-col items-center gap-2 rounded-lg border p-3 transition hover:shadow-md"
                 >
                   <img
-                    src={`/icons/${relatedIcon.category}/${relatedIcon.brand}/${relatedIcon.fileName}`}
+                    src={`/icons/${relatedIcon.category}/${relatedIcon.slug}/${relatedIcon.fileName}`}
                     alt={relatedIcon.name}
                     className="h-14 w-14 object-contain"
                   />
